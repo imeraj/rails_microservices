@@ -24,6 +24,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_attr (0.10.2)
+      activemodel (>= 3.0.2, < 5.2)
+      activesupport (>= 3.0.2, < 5.2)
     activejob (5.1.4)
       activesupport (= 5.1.4)
       globalid (>= 0.3.6)
@@ -39,6 +42,14 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
+    barrister (0.1.1)
+      json (>= 1.5.0)
+    barrister-intraprocess (0.3.0)
+      barrister (~> 0)
+    barrister-rails (0.0.2)
+      active_attr (~> 0)
+      barrister (~> 0)
+      barrister-intraprocess (~> 0)
     builder (3.2.3)
     byebug (9.1.0)
     concurrent-ruby (1.0.5)
@@ -49,6 +60,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
+    json (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -122,6 +134,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  barrister-rails (= 0.0.2)
   byebug
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)

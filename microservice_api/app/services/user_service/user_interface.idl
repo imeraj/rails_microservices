@@ -1,0 +1,14 @@
+struct UserProperties {
+  email        string
+  full_name    string
+  phone_number string[optional]
+}
+
+struct User extends UserProperties {
+  id           int[optional]
+}
+
+interface UserService {
+  create_user(properties UserProperties) User
+  get_all_users() []User
+}
